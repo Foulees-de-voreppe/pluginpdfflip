@@ -26,9 +26,9 @@ $PAGE->set_title(format_string($pdfflip->name));
 $PAGE->set_heading(format_string($course->fullname));
 
 $renderer = $PAGE->get_renderer('mod_pdfflip');
+$content = $renderer->render_pdfflip($pdfflip, $context);
 
 echo $OUTPUT->header();
-
-echo $renderer->render_pdfflip($pdfflip, $context);
+echo $content;
 
 echo $OUTPUT->footer();
