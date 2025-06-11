@@ -3,6 +3,8 @@ namespace mod_pdfflip\output;
 
 use plugin_renderer_base;
 use context;
+use html_writer;
+use moodle_url;
 
 class renderer extends plugin_renderer_base {
     public function render_pdfflip(\stdClass $pdfflip, context $context): string {
